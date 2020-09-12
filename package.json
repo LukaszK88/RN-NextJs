@@ -1,18 +1,13 @@
 {
   "name": "with-react-native-web",
   "scripts": {
-    "dev": "next",
-    "build": "next build",
-    "start": "next start"
+    "postinstall": "concurrently \"cd app && yarn install\" \"cd web && yarn install\"",
+    "start:web:dev": "cd web && yarn dev",
+    "start:android": "cd app && yarn android && yarn start"
   },
   "dependencies": {
-    "next": "latest",
-    "react": "^16.7.0",
-    "react-dom": "^16.7.0",
-    "react-native-web": "^0.11.6"
-  },
-  "devDependencies": {
-    "babel-plugin-react-native-web": "^0.11.7"
+    "concurrently": "^5.3.0",
+    "react": "16.13.1"
   },
   "license": "MIT"
 }

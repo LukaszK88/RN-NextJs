@@ -1,6 +1,12 @@
-import { StyleSheet, Text, View } from 'react-native'
+import React from 'react';
+import {
+  StyleSheet,
+  Text,
+  View,
+} from 'react-native';
+import List from "../components/list";
 
-export default function App(props) {
+const Home = () => {
   return (
     <View style={styles.container}>
       <Text accessibilityRole="header" style={styles.text}>
@@ -16,6 +22,7 @@ export default function App(props) {
           Subheader
         </Text>
       </View>
+      <List/>
     </View>
   )
 }
@@ -39,3 +46,5 @@ const styles = StyleSheet.create({
     marginBottom: 24,
   },
 })
+
+export default Home;
